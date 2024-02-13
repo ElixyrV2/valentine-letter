@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <link href="./styles.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="container">
+            <img class="container-image" src="images/bg.gif" alt="">
+            <div class="brightness"></div>
+            <div class="container-main">
+                <div>
+                    <h1 class="header_text">Ты будешь моей валентинкой...<b></b></h1>
+                    <h2 class="header_text"><strike>14 февраля</strike> всю мою жизнь?</h2>
+                </div>
+                <div class="gif_container">
+                    <img src="images/first.gif">
+                </div>
+                <div class="buttons">
+                    <button class="btn" id="yesButton" onclick="nextPageYes()">Да</button>
+                    <button class="btn" id="noButton" onmouseenter="moveButton()" onclick="moveButton()">Нет</button>
+                    <script>
+                        function nextPageYes() {
+                            window.location.href = "yes.html";
+                        }
+
+                        function moveButton() {
+                            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                            document.getElementById('noButton').style.left = `${x}px`;
+                            document.getElementById('noButton').style.top = `${y}px`;
+                        }
+
+                        function nextPageNo() {
+                            window.location.href = "no.html";
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
